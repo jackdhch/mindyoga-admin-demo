@@ -379,13 +379,34 @@ const products = [
     quota: 16, signed_count: 11, status: 'open'
   },
   {
+    // 真实产品：行程、房型价格、退改规则都来自公众号「心灵瑜伽 齐奇」2026-09-10 推文「把世界的声音调小一点｜Mind Yoga 清迈心灵齐旅」
+    // 那一期是 2026-09-22 ~ 09-26，已经结束；这里的日期是演示用的示例日期
     _id: 'journey-01', type: 'journey', cover: '/images/ev-journey-01.jpg',
-    title: '云南 · 非遗手作与对话之旅',
-    subtitle: '四天三夜 · 旗舰深度体验',
-    desc: '四天三夜。白天跟着当地手艺人学扎染，晚上围坐做哲学式对话，聊聊这几天的见闻，也聊聊自己。',
-    start_at: '2026-12-05 09:00', end_at: '2026-12-08 18:00',
-    city: '云南 · 大理 / 鹤庆', venue: '当地民宿与手艺人工坊',
-    price_normal: 1250000, price_member: 1250000, member_only: false,
+    title: '清迈心灵齐旅 · 把世界的声音调小一点',
+    subtitle: '五天四晚 · 8–10 人小团 · 日期为示例',
+    desc: '五天里，齐奇会陪大家一起完成三场 MindYoga 哲学对话：关于自我、关系、选择、自由，关于我们为什么会成为现在的自己。住在清迈山野间的一栋 Villa，一起吃饭、一起对话、一起沉默，也一起慢慢熟悉彼此。',
+    start_at: '2026-12-08 14:00', end_at: '2026-12-12 12:00',
+    city: '泰国 · 清迈', venue: '清迈山野间的 Villa（报名后告知）',
+    price_normal: 1580000, price_member: 1580000, member_only: false,
+    rooms: [ { k: 'double', name: '双人入住', price: 1580000, note: '可协助安排同性参与者拼房' },
+             { k: 'single', name: '单人入住', price: 1780000, note: '单人房数量有限，以实际房态为准' } ],
+    days: [
+      { d: 'DAY 01', t: 'DROP 卸下', items: ['抵达清迈，入住 Villa', 'Welcome Dinner', 'Hidden Mission 开启，从相遇开始'] },
+      { d: 'DAY 02', t: 'RETURN 回身', items: ['清晨留白', 'MindYoga 对话①：听见自己的声音', '手作时刻，慢慢回到自己'] },
+      { d: 'DAY 03', t: 'STEP OUT 走出去', items: ['前往 Chiang Dao，山野停留', 'MindYoga 对话②：发现自己，还是创造自己？', '温泉与夜色'] },
+      { d: 'DAY 04', t: 'LISTEN 倾听', items: ['留白时刻', 'MindYoga 对话③：当没有地图，我们凭什么判断方向？', '市集漫游，继续观察自己'] },
+      { d: 'DAY 05', t: 'TAKE HOME 带走', items: ['Hidden Mission Reveal', '照片与影像回望、最终书写', 'Final Gift：把问题带回生活'] }
+    ],
+    includes: '住宿、项目内交通、餐饮及活动体验（以报名页列出的为准）',
+    excludes: '往返清迈的大交通、个人签证、个人购物与消费、自由活动期间的额外费用、行程外自行增加的项目',
+    policy: [
+      '出发前 10–14 天取消：退还已支付费用的 50%',
+      '出发前不足 10 天取消：原则上不再退款，可将名额转让给他人（每个名额原则上只能转让 1 次，需提前联系 MindYoga）',
+      '因个人原因迟到、提前离团、临时缺席某项活动，已支付费用不作退还或折现',
+      '如因 MindYoga 项目方原因取消活动，退还已收取的活动费用',
+      '遇极端天气、自然灾害、政府政策等不可抗力，优先协调延期、调整行程或更换同等体验',
+      '行程含瑜伽、冥想、按摩与户外活动；怀孕、重大疾病、近期手术、严重过敏等情况请出发前告知工作人员'
+    ],
     quota: 10, signed_count: 3, status: 'open'
   },
   {
@@ -478,14 +499,30 @@ const goods = [
   },
   {
     _id: 'g-tote', category: 'merch', cover: '/images/goods-tote.jpg',
-    title: 'Mind · Yoga 帆布袋',
-    subtitle: '12 安重磅帆布',
-    desc: '沙龙现场用的就是这一款，装得下一本书和一个笔记本。',
+    title: '塑料不酷 × MindYoga 帆布袋',
+    subtitle: '沙龙伴手礼同款 · 价格为示例',
+    desc: '和综合性环保公益平台「塑料不酷」合作的周边，以前每场哲学沙龙都会送一只。装得下一本书和一个笔记本。',
     skus: [
       { id: 'natural', name: '本白', price_normal: 6800, price_member: 5800, stock: 40 },
       { id: 'ink',     name: '墨绿', price_normal: 6800, price_member: 5800, stock: 0 }
     ],
     sold: 356, status: 'on'
+  },
+  {
+    _id: 'g-cup', category: 'merch', cover: '/images/goods-cup.jpg',
+    title: '塑料不酷 × MindYoga 联名环保杯',
+    subtitle: '2025 杭州、北京站伴手礼同款 · 价格为示例',
+    desc: '「塑料不酷」与 MindYoga 的联名款。2025 年 9 月杭州站、北京站，每位参与者都带走了一个。少用一次性杯子，也算一件小事。',
+    skus: [ { id: 'one', name: '标准款', price_normal: 8800, price_member: 7500, stock: 30 } ],
+    sold: 64, status: 'on'
+  },
+  {
+    _id: 'g-bookmark', category: 'merch', cover: '/images/goods-bookmark.jpg',
+    title: '白族绣娘手作 · 心灵瑜伽书签挂件',
+    subtitle: '大理白族绣娘手工刺绣 · 价格为示例',
+    desc: '大理白族绣娘一针一线绣的心灵瑜伽书签，2025 年上海站、广州站送给幸运参与者的就是它。每一枚的针脚都不完全一样。',
+    skus: [ { id: 'one', name: '单枚', price_normal: 6800, price_member: 5800, stock: 12 } ],
+    sold: 29, status: 'on'
   }
 ]
 
@@ -699,15 +736,15 @@ function buildMembers () {
 // 线索：小程序里「心灵齐旅 · 提交意向」和「机构合作」两张表单的提交
 function seedLeads () {
   return [
-    { id: 'L1', kind: 'journey', name: '安安', phone: '140****1463', target: '云南 · 非遗手作与对话之旅', detail: '2 人同行，想了解 12 月的行程', at: '2026-09-25 21:40', status: 'new', note: '', amount: 0 },
-    { id: 'L2', kind: 'journey', name: 'Yuki', phone: '145****4169', target: '云南 · 非遗手作与对话之旅', detail: '1 人，素食', at: '2026-09-22 10:05', status: 'contacted', note: '已加微信，发了行程单', amount: 0 },
-    { id: 'L3', kind: 'journey', name: '周周', phone: '148****1009', target: '云南 · 非遗手作与对话之旅', detail: '和朋友 3 人', at: '2026-09-12 19:30', status: 'won', note: '已线下付款', amount: 3750000 },
+    { id: 'L1', kind: 'journey', name: '安安', phone: '140****1463', target: '清迈心灵齐旅 · 把世界的声音调小一点', detail: '2 人同行 · 双人入住，想了解 12 月的行程', at: '2026-09-25 21:40', status: 'new', note: '', amount: 0 },
+    { id: 'L2', kind: 'journey', name: 'Yuki', phone: '145****4169', target: '清迈心灵齐旅 · 把世界的声音调小一点', detail: '1 人 · 单人入住，素食', at: '2026-09-22 10:05', status: 'contacted', note: '已加微信，发了行程单', amount: 0 },
+    { id: 'L3', kind: 'journey', name: '周周', phone: '148****1009', target: '清迈心灵齐旅 · 把世界的声音调小一点', detail: '和朋友 3 人 · 双人入住 2 位 + 单人入住 1 位', at: '2026-09-12 19:30', status: 'won', note: '已线下付款', amount: 4940000 },
     { id: 'L4', kind: 'org', name: '陈女士', phone: '139****2201', target: '某精品酒店（文旅）', detail: '想在酒店大堂办一场周末哲学沙龙，30 人左右', at: '2026-09-24 15:12', status: 'new', note: '', amount: 0 },
     { id: 'L5', kind: 'org', name: '王老师', phone: '186****7730', target: '某国际学校（学校 / 研学）', detail: '高中部思辨课，每月一次', at: '2026-09-18 09:48', status: 'contacted', note: '约了下周二电话', amount: 0 },
     { id: 'L6', kind: 'org', name: 'Lily', phone: '137****5518', target: '某生活方式品牌', detail: '新店开业活动，想要联名', at: '2026-09-02 17:20', status: 'lost', note: '预算对不上，年后再聊', amount: 0 }
   ]
 }
-const KEY = 'mindyoga_admin_demo_v4'
+const KEY = 'mindyoga_admin_demo_v5'
 let DB
 try { DB = JSON.parse(localStorage.getItem(KEY)) } catch (e) { DB = null }
 if (!DB || !DB.members) {
