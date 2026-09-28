@@ -341,7 +341,7 @@ const products = [
   {
     _id: 'live-01', type: 'live', cover: '/images/ev-live-01.jpg',
     title: '什么是一个好的提问',
-    subtitle: '主题沙龙 · 哲学对话体验',
+    subtitle: '主题沙龙 · 哲学对话体验 · 示例',
     desc: '我们习惯急着找答案，却很少想想问题本身问得好不好。这一场不谈答案，只练提问：怎样把一个模糊的困惑，变成一个能展开讨论的问题。',
     start_at: '2026-10-12 19:30', end_at: '2026-10-12 22:00',
     city: '上海', venue: '安福路 · 一个有院子的房子',
@@ -349,43 +349,13 @@ const products = [
     quota: 20, signed_count: 13, status: 'open'
   },
   {
-    _id: 'live-02', type: 'live', cover: '/images/ev-live-02.jpg',
-    title: '我们为何害怕独处',
-    subtitle: '现场播客录制 · 可参与提问',
-    desc: '现场录制播客。你可以只听，也可以举手提问，你的问题可能会被剪进节目里。',
-    start_at: '2026-10-19 14:00', end_at: '2026-10-19 16:30',
-    city: '北京', venue: '朝阳 · 合作书店',
-    price_normal: 27700, price_member: 11900, member_only: false,
-    quota: 30, signed_count: 8, status: 'open'
-  },
-  {
-    _id: 'practice-01', type: 'practice', cover: '/images/ev-practice-01.jpg',
-    title: '八周哲学对话训练',
-    subtitle: '小班 · 系列式成长体验',
-    desc: '每周一次，连续八周。先练听懂别人真正想说什么，最后能自己带一场深度对话。小班 12 人，以线上为主，第 4 周和第 8 周在上海线下见面。',
-    start_at: '2026-11-02 20:00', end_at: '2026-12-21 22:00',
-    city: '线上 + 上海', venue: '线上腾讯会议 / 上海线下两次',
-    price_normal: 399900, price_member: 188800, member_only: false,
-    quota: 12, signed_count: 5, status: 'open'
-  },
-  {
-    _id: 'practice-02', type: 'practice', cover: '/images/ev-practice-02.jpg',
-    title: '从身体出发：四周身心实践',
-    subtitle: '短期深度项目 · 外部老师共创',
-    desc: '四周，每周一次，和身体工作者一起设计。每次先做身体练习，再坐下来对话。',
-    start_at: '2026-10-26 10:00', end_at: '2026-11-16 12:30',
-    city: '上海', venue: '徐汇 · 合作空间',
-    price_normal: 399900, price_member: 188800, member_only: false,
-    quota: 16, signed_count: 11, status: 'open'
-  },
-  {
     // 真实产品：行程、房型价格、退改规则都来自公众号「心灵瑜伽 齐奇」2026-09-10 推文「把世界的声音调小一点｜Mind Yoga 清迈心灵齐旅」
-    // 那一期是 2026-09-22 ~ 09-26，已经结束；这里的日期是演示用的示例日期
+    // 真实日期 2026-09-22 ~ 09-26，已结束，放在往期
     _id: 'journey-01', type: 'journey', cover: '/images/ev-journey-01.jpg',
     title: '清迈心灵齐旅 · 把世界的声音调小一点',
-    subtitle: '五天四晚 · 8–10 人小团 · 日期为示例',
+    subtitle: '五天四晚 · 8–10 人小团',
     desc: '五天里，齐奇会陪大家一起完成三场 MindYoga 哲学对话：关于自我、关系、选择、自由，关于我们为什么会成为现在的自己。住在清迈山野间的一栋 Villa，一起吃饭、一起对话、一起沉默，也一起慢慢熟悉彼此。',
-    start_at: '2026-12-08 14:00', end_at: '2026-12-12 12:00',
+    start_at: '2026-09-22 14:00', end_at: '2026-09-26 14:00', time_unknown: true,
     city: '泰国 · 清迈', venue: '清迈山野间的 Villa（报名后告知）',
     price_normal: 1580000, price_member: 1580000, member_only: false,
     rooms: [ { k: 'double', name: '双人入住', price: 1580000, note: '可协助安排同性参与者拼房' },
@@ -407,24 +377,15 @@ const products = [
       '遇极端天气、自然灾害、政府政策等不可抗力，优先协调延期、调整行程或更换同等体验',
       '行程含瑜伽、冥想、按摩与户外活动；怀孕、重大疾病、近期手术、严重过敏等情况请出发前告知工作人员'
     ],
-    quota: 10, signed_count: 3, status: 'open'
-  },
-  {
-    _id: 'clubevent-01', type: 'club_event', cover: '/images/ev-clubevent-01.jpg',
-    title: '会员夜谈 · 上海城市小聚',
-    subtitle: 'Club 限定 · 仅会员可报名',
-    desc: '不设主题，大家围坐一桌，把想说的话慢慢说完。只对会员开放。',
-    start_at: '2026-10-08 19:30', end_at: '2026-10-08 22:30',
-    city: '上海', venue: '静安 · 会员空间',
-    price_normal: 0, price_member: 0, member_only: true,
-    quota: 15, signed_count: 9, status: 'open'
+    quota: 10, signed_count: 10, status: 'ended'
   },
   {
     // 联名活动示例：客户提到上海有位外国主理人每周在家办 Deep Talk，未来可能联名。名称与细节均为示例
     _id: 'collab-01', type: 'live', cover: '/images/ev-collab-01.jpg',
+    pinned: true,   // 首页「旗舰活动」只放这一场（联名是最想展示的）
     collab: { name: 'Deep Talk 主理人（示例）' },
     title: 'Deep Talk × MindYoga｜客厅里的哲学夜',
-    subtitle: '联名活动 · 中英文均可',
+    subtitle: '联名活动 · 中英文均可 · 示例',
     desc: '和每周在家里办 Deep Talk 的主理人联名。十来个人坐在客厅里，中文英文都可以，用哲学式对话聊一个大家都有体会的问题。',
     start_at: '2026-10-16 19:30', end_at: '2026-10-16 22:00',
     city: '上海', venue: '主理人家中（报名后告知地址）',
@@ -432,24 +393,28 @@ const products = [
     quota: 12, signed_count: 7, status: 'open'
   },
   {
-    _id: 'practice-03', type: 'practice', cover: '/images/ev-practice-03.jpg',
-    title: 'Mindful Practice｜哲学对话引导者培训',
-    subtitle: '三到四周 · 筹备中',
-    desc: '想自己带一场哲学对话？这门课由齐奇带领，用三到四周，从提问、倾听到控场一步步练。课程正在筹备，时间和价格以正式通知为准。',
-    start_at: '2026-11-14 10:00', end_at: '2026-12-06 17:00',
-    city: '上海', venue: '地点待定',
-    price_normal: 399900, price_member: 188800, member_only: false,
-    quota: 12, signed_count: 2, status: 'open'
+    // 真实往期联名：公众号 2026-01-31 推文「MindYoga&非遗锔缮｜上海站」。已结束（status: 'ended'），只在「联名活动」的往期里出现
+    _id: 'collab-02', type: 'live', cover: '/images/ev-collab-02.jpg',
+    collab: { name: '南山叙 · 锔缮文化艺术推广者刘海云' },
+    title: 'MindYoga × 非遗锔缮｜破碎后的重生与圆满',
+    subtitle: '联名活动 · 哲学对话 + 非遗锔缮课',
+    desc: '齐奇和南山叙锔缮文化艺术推广者刘海云一起办的一场：先用哲学的眼光聊「破碎」，再亲手学一堂非遗锔缮课，让破损的器物重生。每个人都是自己的修复师。',
+    start_at: '2026-02-07 13:00', end_at: '2026-02-07 18:00',
+    city: '上海', venue: '一尺花园（前滩休闲公园店）',
+    price_normal: 49800, price_member: 49800, member_only: false,
+    quota: 15, signed_count: 15, status: 'ended'
   },
   {
-    _id: 'clubevent-02', type: 'club_event', cover: '/images/ev-clubevent-02.jpg',
-    title: '会员茶会 · 一壶茶，一个问题',
-    subtitle: 'Club 限定 · 仅会员可报名',
-    desc: '泡一壶茶，围坐聊一个问题，茶喝完就散。只对会员开放。',
-    start_at: '2026-11-01 15:00', end_at: '2026-11-01 17:30',
-    city: '上海', venue: '静安 · 会员空间',
-    price_normal: 0, price_member: 0, member_only: true,
-    quota: 16, signed_count: 6, status: 'open'
+    // 真实往期联名：公众号 2026-05-21 推文「MindYoga × 藏源旅行：赴一场藏地心灵之约」。已结束
+    _id: 'collab-03', type: 'journey', cover: '/images/ev-collab-03.jpg',
+    collab: { name: '藏源旅行' },
+    title: 'MindYoga × 藏源旅行｜赴一场藏地心灵之约',
+    subtitle: '联名活动 · 心灵齐旅西藏站 · 6 天 5 晚',
+    desc: '和藏源旅行一起办的心灵齐旅西藏站。在高原上通过哲学沙龙、非遗体验、人文行走，和同频的伙伴一起向内探索。全程仅限 15 席。',
+    start_at: '2026-06-09 09:00', end_at: '2026-06-14 12:00',
+    city: '西藏', venue: '拉萨及周边（以行程单为准）',
+    price_normal: 1480000, price_member: 1480000, member_only: false,
+    quota: 15, signed_count: 15, status: 'ended'
   },
   {
     // 真实活动，来自公众号「心灵瑜伽 齐奇」2026-04-17 的推文 https://mp.weixin.qq.com/s/Bckoj1Q4kMsrDRY6tcxRIA
@@ -460,7 +425,296 @@ const products = [
     start_at: '2026-04-25 14:00', end_at: '2026-04-25 17:00',
     city: '上海', venue: '一尺花园 · 前滩休闲公园店',
     price_normal: 27700, price_member: 11900, member_only: false,
-    quota: 21, signed_count: 21, status: 'closed'
+    quota: 21, signed_count: 21, status: 'ended'
+  },
+  // ================= 往期真实活动（2026-09-28 从公众号 18 篇推文整理导入）=================
+  {
+    // 往期真实活动，出处：公众号推文 2024-12-03_什么是“心灵瑜伽”？、2024-12-22_心灵之旅·双城记
+    _id: "h-2409-cd",
+    type: "live",
+    cover: "/images/h-01.jpg",
+    title: "什么是孤独",
+    subtitle: "MindYoga · 成都站",
+    desc: "2024年9月心灵瑜伽在成都的一站哲学沙龙，地点是一家复古书店——野梨树书店。大家在咖啡香里围坐一圈，由齐奇带领分组讨论，话题是「什么是孤独」，每个人认真听彼此发言，结合自己的经历交流看法。",
+    recap: "大家围坐一圈分组讨论「什么是孤独」。有参与者说孤独不会因年龄增长而消失，会在每个阶段以不同形式出现；大家一致认为孤独与成长相互伴随，意识到孤独正是认真了解自我的表现。",
+    start_at: "2024-09-01 14:00",
+    city: "成都",
+    venue: "野梨树书店",
+    price_normal: 0,
+    price_member: 0,
+    member_only: false,
+    status: "ended",
+    date_label: "2024年9月"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2024-12-03_什么是“心灵瑜伽”？、2024-12-22_心灵之旅·双城记
+    _id: "h-2409-dl",
+    type: "live",
+    cover: "/images/h-02.jpg",
+    title: "如何在自我和家庭中做平衡",
+    subtitle: "MindYoga · 大理站",
+    desc: "2024年9月心灵瑜伽在大理喜洲古镇一座百年老宅里举办，茶桌摆在芭蕉树下。这一站围绕「如何在自我和家庭中做平衡」展开，引导者带大家练习专注倾听、用简洁的语言表达想法、提出有哲学性的问题。",
+    recap: "大家自由分组，轮流讲述与倾听。体会到描述要简短精确、提问要开放且有哲学性、交流时尽量不替别人做决定；有人把自己与家庭的关系比作一个圆形地球，从亲密到远离，最终又会交融。",
+    start_at: "2024-09-01 14:00",
+    city: "大理",
+    venue: "喜洲古镇的一座百年老宅",
+    price_normal: 0,
+    price_member: 0,
+    member_only: false,
+    status: "ended",
+    date_label: "2024年9月"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2024-12-03_什么是“心灵瑜伽”？、2024-12-13_心灵瑜伽之旅：上海站
+    _id: "h-240921-sh",
+    type: "live",
+    cover: "/images/h-03.jpg",
+    title: "孤独感应该怎样获得平衡？",
+    subtitle: "上海「心灵瑜伽」奇妙夜 · 武康路",
+    desc: "2024年9月21日在上海武康路举办的心灵瑜伽，傍晚在一处幽静的小天地里带着茶香开场。来的人背景很多元，由引导者带着大家围绕孤独感的平衡展开讨论，不争对错，只在乎真实的表达和交流。",
+    recap: "现场由引导者带领推进，大家谈到小朋友成长的伤痕与自我和解、成年人直面孤独的方法、下班后守护自我的时刻、成为母亲分娩的经历；一位参与者说她孤独感减弱，是因为找到了更有意义的事。齐奇最后红了眼眶。",
+    start_at: "2024-09-21 14:00",
+    city: "上海",
+    venue: "武康路",
+    price_normal: 0,
+    price_member: 0,
+    member_only: false,
+    status: "ended",
+    time_unknown: true
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-01-04_上海站_心灵瑜伽2025活动开始报名啦！、2025-02-19_1月24日·上海_心灵瑜伽活动回顾
+    _id: "h-250124-sh",
+    type: "live",
+    cover: "/images/h-04.jpg",
+    title: "人生需要有意义吗？",
+    subtitle: "MindYoga · 上海站",
+    desc: "2025年心灵瑜伽的第一场活动，1月24日周五晚上在上海闵行虹桥天地的壹一無二举办，由发起人齐奇带领。这一晚讨论的问题是「人生需要有意义吗」，大家通过哲学视角并结合自己的经历展开交流。",
+    recap: "齐奇在壹一无二·茶空间带大家讨论人生意义。有人说意义是追逐梦想、突破自我的过程；有人说是平凡生活里与家人朋友相聚的温暖；也有人说意义或许不存在，但仍能在无意义中找到快乐与满足。",
+    includes: "茶饮、塑料不酷周边帆布袋",
+    start_at: "2025-01-24 19:00",
+    end_at: "2025-01-24 21:30",
+    city: "上海",
+    venue: "壹一無二（闵行区申长路900号虹桥天地2号楼G层03室）",
+    price_normal: 17700,
+    price_member: 17700,
+    member_only: false,
+    quota: 25,
+    signed_count: 25,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-01-04_上海站_心灵瑜伽2025活动开始报名啦！、2025-02-25_1月25日·上海_心灵瑜伽活动回顾
+    _id: "h-250125-sh",
+    type: "live",
+    cover: "/images/h-05.jpg",
+    title: "什么是原谅？",
+    subtitle: "MindYoga · 上海站",
+    desc: "1月25日周六下午在上海虹桥基金小镇举办的心灵瑜伽，是齐奇在上海连开的两场中的第二场。这场的主题是「什么是原谅？」，大家从哲学、情感、文化等多个角度切入，结合自己的故事交流。",
+    recap: "冬日午后，二十余位参与者在茶舍围坐讨论「原谅」。有人分享生活琐事中的释然，有人谈人际关系的边界，有人以亲密关系为例思考原谅是否等于放下；齐奇追问原谅是否需要对方回应、如何区分原谅与妥协。",
+    includes: "茶饮、塑料不酷周边帆布袋",
+    start_at: "2025-01-25 15:30",
+    end_at: "2025-01-25 18:00",
+    city: "上海",
+    venue: "了心茶舍（预告写作「见山」，闵行区虹梅路3081号虹桥基金小镇61栋）",
+    price_normal: 17700,
+    price_member: 17700,
+    member_only: false,
+    quota: 25,
+    signed_count: 25,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-01-09_广州站_心灵瑜伽2025活动报名
+    _id: "h-250203-gz",
+    type: "live",
+    cover: "/images/h-06.jpg",
+    title: "哲学沙龙 · 广州站",
+    subtitle: "MindYoga · 广州站",
+    desc: "春节期间齐奇在广州珠光·NT办的心灵瑜伽第一场，2月3日周一下午。为了保证活动质量，首场报名严格控制在15人以内；主办方还提醒，如果原本有陪伴家人的计划，不必为了活动改变安排。",
+    includes: "茶饮、塑料不酷周边帆布袋",
+    start_at: "2025-02-03 15:00",
+    end_at: "2025-02-03 18:00",
+    city: "广州",
+    venue: "珠光·NT（广州市天河区花城大道770号3楼小沙龙厅，潭村地铁B出口直行100米）",
+    price_normal: 17700,
+    price_member: 17700,
+    member_only: false,
+    quota: 15,
+    signed_count: 15,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-07-21_心灵瑜伽上海站来啦！！！
+    _id: "h-250727-sh",
+    type: "live",
+    cover: "/images/h-07.jpg",
+    title: "什么是爱？",
+    subtitle: "上海 · Gin blue · 两晚连续对话",
+    desc: "2025年7月齐奇在上海陆家嘴桔子水晶酒店的Gin blue水晶酒廊带来的两场心灵瑜伽，这是第一晚，周日20:00开始。海报主题是「什么是爱？」，定位是连续两天的深入探讨，名额仅20个。",
+    includes: "鸡尾酒一杯，塑料不酷周边帆布袋",
+    start_at: "2025-07-27 20:00",
+    end_at: "2025-07-28 22:00",
+    city: "上海",
+    venue: "上海陆家嘴金融中心桔子水晶酒店3F右边的Gin blue水晶酒廊（潍坊路328号）",
+    price_normal: 37700,
+    price_member: 37700,
+    member_only: false,
+    quota: 20,
+    signed_count: 20,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-08-01_哲学沙龙_MindYoga_杭州站
+    _id: "h-250810-hz",
+    type: "live",
+    cover: "/images/h-08.jpg",
+    title: "哲学沙龙 · 杭州站",
+    subtitle: "MindYoga · 杭州站",
+    desc: "齐奇8月10日在杭州带来的一场单日心灵瑜伽哲学沙龙。预告里说，在这里你会学习倾听、学习表达、学习用哲学的眼光看待生活中的每一个瞬间，参与者褪去身份与标签，没有标准答案。",
+    includes: "软饮一杯；赠品：综合性环保公益平台「塑料不酷」周边帆布袋",
+    start_at: "2025-08-10 14:00",
+    city: "杭州",
+    venue: "",
+    price_normal: 27700,
+    price_member: 27700,
+    member_only: false,
+    quota: 21,
+    signed_count: 21,
+    status: "ended",
+    time_unknown: true
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-08-29_哲学沙龙_MindYoga_杭州站
+    _id: "h-250905-hz",
+    type: "live",
+    cover: "/images/h-09.jpg",
+    title: "哲学沙龙 · 杭州临平站",
+    subtitle: "MindYoga · 杭州站",
+    desc: "齐奇9月5日17:00到21:30在杭州临平区超山芯空间带来的一场心灵瑜伽哲学沙龙，名额16个。海报上写着「哲学是对人生的系统的反思，人必须对人生进行反思，并把自己的思想系统地表述出来」。",
+    includes: "赠品：综合性环保公益平台「塑料不酷」X心灵瑜伽联名款环保杯一个",
+    start_at: "2025-09-05 17:00",
+    end_at: "2025-09-05 21:30",
+    city: "杭州",
+    venue: "杭州市临平区超山芯空间",
+    price_normal: 27700,
+    price_member: 27700,
+    member_only: false,
+    quota: 16,
+    signed_count: 16,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-08-31_哲学沙龙_MindYoga_北京站
+    _id: "h-250907-bj",
+    type: "live",
+    cover: "/images/h-10.jpg",
+    title: "哲学沙龙 · 北京站",
+    subtitle: "MindYoga · 北京站",
+    desc: "齐奇9月7日17:00到21:30在北京带来的一场心灵瑜伽哲学沙龙，名额21个，具体地点进群后通知。预告写道，在这里你会学习倾听、学习表达，用哲学的眼光看待生活中的每一个瞬间。",
+    includes: "赠品：综合性环保公益平台「塑料不酷」X心灵瑜伽联名款环保杯一个",
+    start_at: "2025-09-07 17:00",
+    end_at: "2025-09-07 21:30",
+    city: "北京",
+    venue: "报名进群后通知",
+    price_normal: 27700,
+    price_member: 27700,
+    member_only: false,
+    quota: 21,
+    signed_count: 21,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-08-16_把一次旅程，变成一场哲学与心灵的远行
+    _id: "h-250912-dl",
+    type: "journey",
+    cover: "/images/h-11.jpg",
+    title: "心灵齐旅 · 大理",
+    subtitle: "四天三晚 · 扎染、三道茶、篝火对话",
+    desc: "2025年9月12日到15日在云南大理的四天三晚心灵齐旅。白天在山水之间感受风土与传统文化，夜晚围坐在茶香与篝火旁对话；内容有沉浸式哲学沙龙、传统茶文化与非遗（扎染、三道茶），以及自然与人文结合的旅行路线。",
+    start_at: "2025-09-12 14:00",
+    end_at: "2025-09-15 14:00",
+    city: "大理",
+    venue: "中国·云南大理",
+    price_normal: 0,
+    price_member: 0,
+    member_only: false,
+    status: "ended",
+    time_unknown: true
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-12-31_哲学沙龙_MindYoga_乌鲁木齐站
+    _id: "h-260120-urc",
+    type: "live",
+    cover: "/images/card-bg.jpg",
+    title: "哲学沙龙 · 乌鲁木齐站（第一场）",
+    subtitle: "MindYoga · 乌鲁木齐站",
+    desc: "齐奇在乌鲁木齐连开两场心灵瑜伽哲学沙龙，这是第一场，1月20日17:00到21:30，每场限25人，地点进群后通知。预告写道，参与者褪去身份与标签，这里没有答案的桎梏，只有问题的羽翼。",
+    start_at: "2026-01-20 17:00",
+    end_at: "2026-01-20 21:30",
+    city: "乌鲁木齐",
+    venue: "报名进群后通知",
+    price_normal: 27700,
+    price_member: 27700,
+    member_only: false,
+    quota: 25,
+    signed_count: 25,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2025-12-31_哲学沙龙_MindYoga_乌鲁木齐站
+    _id: "h-260121-urc",
+    type: "live",
+    cover: "/images/card-bg.jpg",
+    title: "哲学沙龙 · 乌鲁木齐站（第二场）",
+    subtitle: "MindYoga · 乌鲁木齐站",
+    desc: "乌鲁木齐站的第二场，1月21日17:00到21:30，每场限25人，地点进群后通知。预告写道，在这里你会学习倾听、学习表达，会学习用哲学的眼光去看待生活中的每一个瞬间。",
+    start_at: "2026-01-21 17:00",
+    end_at: "2026-01-21 21:30",
+    city: "乌鲁木齐",
+    venue: "报名进群后通知",
+    price_normal: 27700,
+    price_member: 27700,
+    member_only: false,
+    quota: 25,
+    signed_count: 25,
+    status: "ended"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2024-12-03_什么是“心灵瑜伽”？
+    _id: "h-24-lon",
+    type: "live",
+    cover: "/images/h-12.jpg",
+    title: "自我感知需要被外界肯定吗",
+    subtitle: "MindYoga · 伦敦站",
+    desc: "心灵瑜伽在伦敦的一站哲学沙龙，围绕「自我感知需要被外界肯定吗」展开，营造了一个开放而包容的讨论氛围，参与者通过倾听与分享，探讨自我认知与接纳的内在力量。",
+    recap: "参与者通过倾听与分享探讨自我认知与接纳，大家认识到真正的自我感知不应完全依赖外界的肯定，而应建立在内在的价值观与信念之上，学着在自我与外界之间找到平衡。",
+    start_at: "2024-01-01 00:00",
+    city: "伦敦",
+    venue: "",
+    price_normal: 0,
+    price_member: 0,
+    member_only: false,
+    status: "ended",
+    date_label: "2024年或更早"
+  },
+  {
+    // 往期真实活动，出处：公众号推文 2024-12-03_什么是“心灵瑜伽”？
+    _id: "h-24-ams",
+    type: "live",
+    cover: "/images/h-13.jpg",
+    title: "愧疚感从何而来",
+    subtitle: "MindYoga · 阿姆斯特丹站",
+    desc: "心灵瑜伽在阿姆斯特丹的一站哲学沙龙，主题是「愧疚感从何而来」。参与者探讨了人产生愧疚感的机制，涉及个人价值观、社会期望以及个人行为等多方面因素，还就愧疚的门槛展开了辩论。",
+    recap: "大家就愧疚的门槛热烈辩论：有人认为愧疚感是道德指南针，能引导我们做出正确选择；也有人认为过度的愧疚感会成为心理负担、影响心理健康。讨论愧疚是好是坏时，大家普遍认同它的双面性。",
+    start_at: "2024-01-01 00:00",
+    city: "阿姆斯特丹",
+    venue: "",
+    price_normal: 0,
+    price_member: 0,
+    member_only: false,
+    status: "ended",
+    date_label: "2024年或更早"
   }
 ]
 
@@ -535,7 +789,7 @@ const GOODS_CATS = [
 ]
 
 // ---- posts 表（社群动态，2026-09-27 客户反馈新增）----
-// featured = 精选：非会员只能看精选里的前 3 条。以下全部是演示内容，作者均为虚构
+// featured = 精选：非会员完整看精选里的前 2 条，第 3 条磨砂。以下全部是演示内容，作者均为虚构
 const posts = [
   { _id: 'p-01', author: 'Jay', event_id: 'live-00', featured: true, likes: 23, created_at: '2026-04-26 09:12',
     text: '以前觉得爱自己就是对自己好一点。那天被问了一句：「你说的『好』，是谁定的标准？」回家路上一直在想这个问题。',
@@ -543,7 +797,7 @@ const posts = [
     comments: [{ author: 'Zoe', text: '这个问题我也被问住了。', at: '2026-04-26 10:03' }, { author: 'Mia', text: '下次沙龙可以接着聊。', at: '2026-04-26 12:40' }] },
   { _id: 'p-02', author: 'Zoe', event_id: '', featured: true, likes: 31, created_at: '2026-09-20 22:31',
     text: '第一次参加会员夜谈，本来很紧张，怕自己说不好。结果发现大家都在认真听，说慢一点也没关系。',
-    images: ['/images/ev-clubevent-01.jpg'], comments: [] },
+    images: [], comments: [] },
   { _id: 'p-03', author: 'Mia', event_id: '', featured: true, likes: 15, created_at: '2026-09-18 20:05',
     text: '推荐最近在读的《苏格拉底的申辩》，很薄，一个下午能读完。读完再回头看沙龙里练的「提问」，更能明白为什么要一直追问下去。',
     images: [], comments: [{ author: 'Jay', text: '收藏了，周末去买。', at: '2026-09-18 21:10' }] },
@@ -590,6 +844,7 @@ const user = {
   // 联系人：第一次付款前填一次（微信一键或手填），之后自动带出
   contact_name: '',
   phone: '',
+  registered_at: '',   // 空 = 还没注册（演示版重置后会看到注册流程）
 
   member_no: '',
   member_status: false,
