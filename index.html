@@ -54,11 +54,11 @@ h1, h2, h3 { text-wrap: balance; margin: 0; }
 
 /* ---------- 顶栏 ---------- */
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair); }
-.top-in { max-width: 1200px; margin: 0 auto; padding: 0 28px; height: 64px; display: flex; align-items: center; gap: 28px; }
+.top-in { max-width: 1200px; margin: 0 auto; padding: 0 28px; height: 64px; display: flex; align-items: center; gap: 22px; }
 .mark { width: 124px; height: 24px; background: var(--ink); -webkit-mask: url(data:image/png;base64,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) no-repeat left center / contain; mask: url(data:image/png;base64,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) no-repeat left center / contain; flex-shrink: 0; }
 .mark-s { font-size: 12px; color: var(--muted); letter-spacing: 2px; padding-left: 14px; border-left: 1px solid var(--hair); margin-left: -12px; white-space: nowrap; }
-.tabs { display: flex; gap: 4px; margin-left: 8px; }
-.tab { border: 0; background: none; padding: 8px 14px; border-radius: 20px; color: var(--ink-2); font-size: 14px; white-space: nowrap; }
+.tabs { display: flex; gap: 2px; margin-left: 4px; overflow-x: auto; scrollbar-width: none; }
+.tab { border: 0; background: none; padding: 8px 13px; border-radius: 20px; color: var(--ink-2); font-size: 14px; white-space: nowrap; }
 .tab:hover { background: var(--hair-2); }
 .tab.on { background: var(--ink); color: var(--bg); }
 .top-r { margin-left: auto; display: flex; align-items: center; gap: 12px; }
@@ -220,6 +220,51 @@ textarea:focus { border-color: var(--gold); }
 .exp-row span { display: block; font-size: 13px; color: var(--muted); }
 .exp-n { font-family: var(--serif); font-size: 32px; min-width: 70px; color: var(--gold); }
 
+/* ---------- 待处理 ---------- */
+.todo { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
+.todo-i { display: flex; align-items: center; gap: 14px; text-align: left; border: 1px solid var(--hair); background: var(--panel); border-radius: 16px; padding: 14px 18px; color: var(--ink); }
+.todo-i:hover { border-color: var(--gold); }
+.todo-i b { font-family: var(--serif); font-size: 34px; font-weight: 500; line-height: 1; font-variant-numeric: lining-nums tabular-nums; }
+.todo-i span { flex: 1; font-size: 13px; font-weight: 600; }
+.todo-i small { display: block; font-size: 12px; font-weight: 400; color: var(--muted); }
+.todo-i i { font-style: normal; color: var(--muted); font-size: 18px; }
+.sub { display: block; font-size: 12px; color: var(--muted); }
+.btn.sm { padding: 5px 12px; font-size: 12px; }
+.none { text-align: center; padding: 40px; color: var(--muted); }
+.pill { font-size: 11px; font-weight: 400; color: var(--gold); background: var(--gold-soft); border-radius: 10px; padding: 1px 8px; margin-left: 8px; }
+/* 活动表单 */
+.form { display: grid; gap: 12px; }
+.form .field input, .form .field select, .form .field textarea { width: 100%; border: 1px solid var(--hair); background: var(--raise); border-radius: 10px; padding: 8px 10px; font-size: 13px; color: var(--ink); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.hint { font-size: 12px; color: var(--muted); line-height: 1.7; }
+/* 线索 */
+.leads, .posts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.lead, .post { background: var(--panel); border-radius: 18px; box-shadow: var(--shadow); padding: 18px 20px; display: grid; gap: 8px; align-content: start; }
+.lead-h { display: flex; justify-content: space-between; align-items: center; }
+.lead-k { font-size: 12px; color: var(--gold); letter-spacing: 1px; }
+.lead-t { font-size: 15px; font-weight: 600; }
+.lead-d { font-size: 13px; color: var(--ink-2); }
+.lead-p { font-size: 13px; }
+.lead-p .sub { display: inline; margin-left: 8px; }
+.lead-w { font-size: 12px; color: var(--ok); }
+.lead .field input { width: 100%; border: 1px solid var(--hair); background: var(--raise); border-radius: 10px; padding: 7px 10px; font-size: 13px; color: var(--ink); }
+/* 社群 */
+.post.off { opacity: .55; }
+.post .who > div > b .pill { margin-left: 6px; }
+.post-t { margin: 0; font-size: 14px; line-height: 1.8; }
+.post-f { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--hair-2); padding-top: 10px; }
+/* 渠道码 */
+.chs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.ch { display: flex; gap: 20px; background: var(--panel); border-radius: 18px; box-shadow: var(--shadow); padding: 18px 20px; align-items: flex-start; }
+.ch-qr { flex-shrink: 0; border-radius: 10px; overflow: hidden; line-height: 0; border: 1px solid var(--hair); }
+.qr-miss { width: 132px; height: 132px; display: grid; place-items: center; font-size: 12px; color: var(--muted); text-align: center; padding: 10px; line-height: 1.5; }
+.ch-b { min-width: 0; flex: 1; }
+.ch-k { font-size: 12px; color: var(--gold); letter-spacing: 1px; }
+.ch-t { font-size: 15px; font-weight: 600; margin: 2px 0 8px; }
+.ch-n { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+.ch-n b { display: block; font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--ink); line-height: 1.1; font-variant-numeric: lining-nums tabular-nums; }
+.ch-p { display: block; margin-top: 10px; font-size: 11px; color: var(--muted); background: var(--hair-2); border-radius: 6px; padding: 4px 8px; overflow-x: auto; white-space: nowrap; }
+
 /* ---------- 弹窗 / 提示 ---------- */
 .modal { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; background: rgba(12,18,15,.45); padding: 16px; }
 .modal[hidden] { display: none; }
@@ -227,7 +272,7 @@ textarea:focus { border-color: var(--gold); }
 .modal-b h3 { font-size: 18px; margin-bottom: 6px; }
 .modal-b p { color: var(--ink-2); font-size: 13px; margin: 0 0 16px; }
 .modal-b .field { margin-bottom: 12px; }
-.modal-b .field input { width: 100%; }
+.modal-b .field input, .modal-b .field select { width: 100%; border: 1px solid var(--hair); background: var(--raise); border-radius: 10px; padding: 8px 10px; font-size: 13px; }
 .modal-f { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }
 .toast { position: fixed; left: 50%; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); z-index: 70; transform: translate(-50%, 10px); background: var(--ink); color: var(--bg); padding: 9px 20px; border-radius: 22px; font-size: 13px; opacity: 0; transition: opacity .2s, transform .2s; pointer-events: none; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
@@ -247,6 +292,9 @@ textarea:focus { border-color: var(--gold); }
   .ev { grid-template-columns: 52px minmax(0, 1fr); }
   .ev-side { grid-column: 1 / -1; }
   .exp-row { flex-wrap: wrap; }
+  .todo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .leads, .posts, .chs, .row2 { grid-template-columns: 1fr; }
+  .ch { flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -256,9 +304,13 @@ textarea:focus { border-color: var(--gold); }
   <div class="mark" role="img" aria-label="Mind · Yoga"></div>
   <div class="mark-s">运营后台</div>
   <nav class="tabs" id="tabs">
-    <button class="tab" data-v="overview">数据概览</button>
-    <button class="tab" data-v="members">会员名录</button>
+    <button class="tab" data-v="overview">概览</button>
+    <button class="tab" data-v="members">会员</button>
     <button class="tab" data-v="events">活动</button>
+    <button class="tab" data-v="orders">订单</button>
+    <button class="tab" data-v="leads">线索</button>
+    <button class="tab" data-v="community">社群</button>
+    <button class="tab" data-v="channels">渠道码</button>
     <button class="tab" data-v="export">导出</button>
   </nav>
   <div class="top-r"><span class="chip-demo">演示数据</span><button class="icon-btn" id="theme" title="切换深色 / 浅色" aria-label="切换深色或浅色">◐</button></div>
@@ -271,6 +323,7 @@ textarea:focus { border-color: var(--gold); }
 <div class="modal" id="modal" hidden><div class="modal-b" id="modalB"></div></div>
 <div class="toast" id="toast" role="status"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
 <script>var module = { exports: {} };
 // 演示用假数据。字段与云数据库 5 张表逐字段一致，切到真库时页面代码不用改。
 // 金额一律用「分」存，避免浮点误差；显示时除以 100。
@@ -621,14 +674,48 @@ function buildMembers () {
     member_status: false, member_no: '', member_since: '', member_expire_at: '', perms: { post: false, club: false, priority: false }, muted: false,
     note: '小程序里的演示账号', log: [],
     orders: MOCK.orders.map(o => ({ t: o.product_type, title: o.product_title, amount: o.amount, at: o.paid_at.slice(0, 10), attended: o.product_type === 'goods' ? null : true })) })
+  // 约两成用户买过商品；三成的商品订单还没发货，好让「待发货」有东西可看
+  list.forEach(m => {
+    if (m.id === 'demo-001' || r() > 0.2) return
+    const g = MOCK.goods[Math.floor(r() * MOCK.goods.length)], k = g.skus.find(x => x.stock > 0) || g.skus[0], qty = 1 + Math.floor(r() * 2)
+    const at = new Date(TODAY.getTime() - Math.floor(r() * 90) * 864e5), st = r() < 0.3 ? 'pending' : r() < 0.5 ? 'shipped' : 'delivered'
+    m.orders.push({ t: 'goods', title: g.title, sku: k.name, qty, amount: (m.member_status ? k.price_member : k.price_normal) * qty, at: d2s(at), attended: null,
+      address: `${m.city}市某某路 ${10 + Math.floor(r() * 90)} 号`,
+      ship: st === 'pending' ? { status: 'pending' } : { status: st, carrier: '顺丰速运', no: 'SF' + String(1e11 + Math.floor(r() * 9e11)) } })
+  })
+  const demo = list[0], mo = MOCK.orders.find(o => o.product_type === 'goods')
+  demo.orders.forEach(o => { if (o.t === 'goods' && mo) Object.assign(o, { sku: mo.sku_name, qty: mo.qty, address: mo.address.detail, ship: { status: mo.ship_status, carrier: mo.logistics.carrier, no: mo.logistics.no } }) })
+  list.forEach(m => m.orders.forEach((o, k) => { o.oid = m.id + '-' + k }))
   return list
 }
-const KEY = 'mindyoga_admin_demo_v3'
+// 线索：小程序里「心灵齐旅 · 提交意向」和「机构合作」两张表单的提交
+function seedLeads () {
+  return [
+    { id: 'L1', kind: 'journey', name: '安安', phone: '140****1463', target: '云南 · 非遗手作与对话之旅', detail: '2 人同行，想了解 12 月的行程', at: '2026-09-25 21:40', status: 'new', note: '', amount: 0 },
+    { id: 'L2', kind: 'journey', name: 'Yuki', phone: '145****4169', target: '云南 · 非遗手作与对话之旅', detail: '1 人，素食', at: '2026-09-22 10:05', status: 'contacted', note: '已加微信，发了行程单', amount: 0 },
+    { id: 'L3', kind: 'journey', name: '周周', phone: '148****1009', target: '云南 · 非遗手作与对话之旅', detail: '和朋友 3 人', at: '2026-09-12 19:30', status: 'won', note: '已线下付款', amount: 3750000 },
+    { id: 'L4', kind: 'org', name: '陈女士', phone: '139****2201', target: '某精品酒店（文旅）', detail: '想在酒店大堂办一场周末哲学沙龙，30 人左右', at: '2026-09-24 15:12', status: 'new', note: '', amount: 0 },
+    { id: 'L5', kind: 'org', name: '王老师', phone: '186****7730', target: '某国际学校（学校 / 研学）', detail: '高中部思辨课，每月一次', at: '2026-09-18 09:48', status: 'contacted', note: '约了下周二电话', amount: 0 },
+    { id: 'L6', kind: 'org', name: 'Lily', phone: '137****5518', target: '某生活方式品牌', detail: '新店开业活动，想要联名', at: '2026-09-02 17:20', status: 'lost', note: '预算对不上，年后再聊', amount: 0 }
+  ]
+}
+const KEY = 'mindyoga_admin_demo_v4'
 let DB
 try { DB = JSON.parse(localStorage.getItem(KEY)) } catch (e) { DB = null }
-if (!DB || !DB.members) DB = { members: buildMembers(), events: {}, checkins: {} }
+if (!DB || !DB.members) {
+  DB = { members: buildMembers(), events: {}, checkins: {}, newEvents: [], leads: seedLeads(), postFlags: {}, channels: [] }
+  // 示例里已成交的心灵齐旅线索，金额同样补录到那位用户身上，两边数字对得上
+  DB.leads.filter(l => l.status === 'won' && l.kind === 'journey').forEach(l => {
+    const m = DB.members.find(x => x.nickname === l.name)
+    if (m) m.orders.push({ t: 'journey', title: l.target, amount: l.amount, at: l.at.slice(0, 10), attended: null, oid: m.id + '-' + m.orders.length })
+  })
+}
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(DB)) } catch (e) {} }
 
+const allEvents = () => MOCK.products.map(p => Object.assign({}, p, DB.events[p._id] || {})).concat(DB.newEvents)
+const LEAD_ST = { new: '新线索', contacted: '已联系', won: '已成交', lost: '暂无意向' }
+const SHIP_ST = { pending: '待发货', shipped: '运输中', delivered: '已签收' }
+const allOrders = () => DB.members.flatMap(m => m.orders.map(o => Object.assign({ m }, o))).sort((a, b) => b.at.localeCompare(a.at))
 const isMember = m => m.member_status && m.member_expire_at && s2d(m.member_expire_at) > TODAY
 const soon = m => isMember(m) && (s2d(m.member_expire_at) - TODAY) < 30 * 864e5
 const spent = m => m.orders.reduce((a, o) => a + o.amount, 0)
@@ -643,7 +730,9 @@ function toast (t) { const el = $('#toast'); el.textContent = t; el.classList.ad
 function dialog ({ title, text = '', fields = [], ok = '确定', danger = false }) {
   return new Promise(res => {
     $('#modalB').innerHTML = `<h3>${esc(title)}</h3>${text ? `<p>${esc(text)}</p>` : ''}
-      ${fields.map(f => `<label class="field">${esc(f.label)}<input id="f-${f.id}" placeholder="${esc(f.ph || '')}"></label>`).join('')}
+      ${fields.map(f => `<label class="field">${esc(f.label)}${f.options
+        ? `<select id="f-${f.id}">${f.options.map(([v, t]) => `<option value="${esc(v)}" ${v === f.value ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select>`
+        : `<input id="f-${f.id}" placeholder="${esc(f.ph || '')}" value="${esc(f.value || '')}">`}</label>`).join('')}
       <div class="modal-f"><button class="btn" id="mCancel">取消</button><button class="btn ${danger ? 'btn-bad' : 'btn-ink'}" id="mOk">${esc(ok)}</button></div>`
     $('#modal').hidden = false
     const first = fields.length ? $('#f-' + fields[0].id) : $('#mOk'); first.focus()
@@ -740,6 +829,13 @@ V.overview = () => {
       </div>
       <div class="hero-spark chart" id="sp">${spark(growth)}<div class="tip"></div></div>
     </section>
+    <section class="todo">
+      ${[['orders', '待发货', all.filter(o => o.t === 'goods' && o.ship && o.ship.status === 'pending').length, '件商品'],
+         ['leads', '新线索', DB.leads.filter(l => l.status === 'new').length, '条未联系'],
+         ['members', '即将到期', soonN, '位会员 30 天内到期'],
+         ['community', '社群', MOCK.posts.filter(x => !(DB.postFlags[x._id] || {}).hidden).length, '条动态在展示']].map(([v, k, n, d]) =>
+        `<button class="todo-i" data-go="${v}" ${v === 'members' ? 'data-who="soon"' : ''}><b class="tnum">${n}</b><span>${k}<small>${d}</small></span><i>›</i></button>`).join('')}
+    </section>
     <section class="stats">
       <div class="stat"><div class="stat-k">本月收入</div><div class="stat-v">¥${Math.round(rev[5].v).toLocaleString('zh-CN')}</div><div class="stat-d">近 6 个月合计 ¥${Math.round(rev.reduce((a, d) => a + d.v, 0)).toLocaleString('zh-CN')}</div></div>
       <div class="stat"><div class="stat-k">活动到场率</div><div class="stat-v">${rate}%</div><div class="stat-d">${evo.length} 次报名，实际到场 ${came} 次</div></div>
@@ -752,6 +848,7 @@ V.overview = () => {
       ${panel('c-grow', '会员人数明细', '每月月底累计会员数与当月新增', cols(growth.map(d => ({ k: d.k, v: d.add })), { unit: ' 位新会员' }), ['月份', '累计会员', '当月新增'], growth.map(d => [d.k, d.v, d.add]))}
     </div>`
   ;['sp', 'c-rev', 'c-type', 'c-src', 'c-grow'].forEach(bindChart)
+  document.querySelectorAll('[data-go]').forEach(b => b.onclick = () => { if (b.dataset.who) F.who = b.dataset.who; show(b.dataset.go) })
 }
 
 let F = { q: '', who: 'all', src: 'all', city: 'all' }
@@ -847,39 +944,76 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#modal'
 let OPEN_EV = null
 V.events = () => {
   // 即将开始的按时间先后，已结束的最近的在前
-  const up = MOCK.products.filter(p => s2d(p.start_at) >= TODAY).sort((a, b) => a.start_at.localeCompare(b.start_at))
-  const past = MOCK.products.filter(p => s2d(p.start_at) < TODAY).sort((a, b) => b.start_at.localeCompare(a.start_at))
+  const evs = allEvents()
+  const up = evs.filter(p => s2d(p.start_at) >= TODAY).sort((a, b) => a.start_at.localeCompare(b.start_at))
+  const past = evs.filter(p => s2d(p.start_at) < TODAY).sort((a, b) => b.start_at.localeCompare(a.start_at))
   const card = p => {
-    const o = DB.events[p._id] || {}, quota = o.quota || p.quota, signed = p.signed_count, full = signed >= quota, d = s2d(p.start_at), isPast = d < TODAY
-    return `<article class="ev ${isPast ? 'past' : ''}" data-id="${p._id}">
+    const o = p, quota = p.quota, signed = p.signed_count || 0, full = signed >= quota, d = s2d(p.start_at), isPast = d < TODAY
+    return `<article class="ev ${isPast || p.status === 'off' ? 'past' : ''}" data-id="${p._id}">
       <div class="date"><b>${d.getDate()}</b><span>${MON[d.getMonth()]}</span></div>
-      <div><div class="ev-t">${esc(p.title)}${p.collab ? '<span class="pill">联名</span>' : ''}${p.member_only ? '<span class="pill">仅会员</span>' : ''}</div>
+      <div><div class="ev-t">${esc(p.title)}${p.collab ? '<span class="pill">联名</span>' : ''}${p.member_only ? '<span class="pill">仅会员</span>' : ''}${p.isNew ? '<span class="pill">新发布</span>' : ''}${p.status === 'off' ? '<span class="pill">已下架</span>' : ''}</div>
         <div class="ev-m">${TYPE[p.type]} · ${p.start_at.slice(11)} · ${esc(p.city)} ${esc(p.venue)}</div>
         <div class="cap"><span class="meter ${full ? 'full' : ''}"><i style="width:${Math.min(100, signed / quota * 100)}%"></i></span>${signed} / ${quota} 人${full ? ' · 已满员' : ''}${o.deadline ? ' · 截止 ' + o.deadline : ''}</div></div>
-      <div class="ev-side"><button class="btn" data-open>${OPEN_EV === p._id ? '收起' : '管理'}</button></div>
+      <div class="ev-side"><button class="btn" data-edit>编辑</button><button class="btn" data-open>${OPEN_EV === p._id ? '收起' : '名单 / 签到'}</button></div>
       ${OPEN_EV === p._id ? `<div class="ev-more">
-        <div class="edit"><label class="field">名额<input type="number" min="1" id="e-quota" value="${quota}" style="width:90px"></label>
-          <label class="field">报名截止<input type="datetime-local" id="e-dead" value="${(o.deadline || p.start_at).replace(' ', 'T')}"></label>
-          <button class="btn btn-ink" data-save>保存</button></div>
         <div id="roster"></div></div>` : ''}
     </article>` }
   $('#main').innerHTML = `
-    <div class="head"><div><div class="eyebrow">Programmes</div><h1 class="h1">活动</h1></div><div class="lede">改名额和报名截止时间，查看报名名单，活动当天勾选到场</div></div>
+    <div class="head"><div><div class="eyebrow">Programmes</div><h1 class="h1">活动</h1></div><button class="btn btn-ink" id="newEv">发布活动</button></div>
+    <div class="lede" style="margin:-12px 0 8px">发布、编辑、下架活动；满员了可以加名额、改报名截止时间；活动当天在名单里勾选到场</div>
     <div class="sec">即将开始 · ${up.length} 场</div><div class="evs">${up.map(card).join('')}</div>
     <div class="sec">已结束 · ${past.length} 场</div><div class="evs">${past.map(card).join('')}</div>`
   document.querySelectorAll('.ev').forEach(el => {
     const id = el.dataset.id
     el.querySelector('[data-open]').onclick = () => { OPEN_EV = OPEN_EV === id ? null : id; V.events() }
-    const s = el.querySelector('[data-save]')
-    if (s) {
-      s.onclick = () => { DB.events[id] = { quota: Number($('#e-quota').value) || 1, deadline: $('#e-dead').value.replace('T', ' ') }; save(); V.events(); toast('已保存，小程序会按新名额和截止时间显示') }
-      roster(id)
-    }
+    el.querySelector('[data-edit]').onclick = () => eventForm(id)
+    if (OPEN_EV === id) roster(id)
   })
+  $('#newEv').onclick = () => eventForm(null)
+}
+// 发布 / 编辑活动：在右侧面板里填，保存后活动列表立刻出现（正式版同步到小程序）
+function eventForm (id) {
+  const p = id ? allEvents().find(x => x._id === id) : { type: 'live', title: '', subtitle: '', start_at: d2s(new Date(TODAY.getTime() + 21 * 864e5)) + ' 19:30', end_at: '', city: '上海', venue: '',
+    price_normal: 27700, price_member: 11900, quota: 20, member_only: false, desc: '', collab: null, status: 'open' }
+  const f = (k, label, type = 'text', extra = '') => `<label class="field">${label}<input id="ev-${k}" type="${type}" value="${esc(type === 'datetime-local' ? String(p[k] || '').replace(' ', 'T') : p[k] == null ? '' : p[k])}" ${extra}></label>`
+  $('#side').innerHTML = `
+    <div class="side-h"><div class="side-n"><div><b>${id ? '编辑活动' : '发布活动'}</b><span>${id ? esc(p.title) : '保存后出现在小程序的活动列表里'}</span></div></div><button class="icon-btn" id="close" aria-label="关闭">✕</button></div>
+    <div class="form">
+      <label class="field">类型<select id="ev-type">${['live', 'practice', 'journey', 'club_event'].map(t => `<option value="${t}" ${p.type === t ? 'selected' : ''}>${TYPE[t]}</option>`).join('')}</select></label>
+      ${f('title', '标题')}${f('subtitle', '一句话介绍')}
+      <div class="row2">${f('start_at', '开始时间', 'datetime-local')}${f('end_at', '结束时间', 'datetime-local')}</div>
+      <div class="row2">${f('city', '城市')}${f('venue', '地点')}</div>
+      <div class="row2"><label class="field">非会员价（元）<input id="ev-pn" type="number" min="0" value="${(p.price_normal || 0) / 100}"></label><label class="field">会员价（元）<input id="ev-pm" type="number" min="0" value="${(p.price_member || 0) / 100}"></label></div>
+      <div class="row2">${f('quota', '名额', 'number', 'min="1"')}${f('deadline', '报名截止（不填 = 开始前都能报）', 'datetime-local')}</div>
+      <label class="field">联名方（自营活动不用填）<input id="ev-collab" value="${esc(p.collab ? p.collab.name : '')}" placeholder="例如：某书店、某品牌"></label>
+      <label class="field">活动介绍<textarea id="ev-desc">${esc(p.desc || '')}</textarea></label>
+      <label class="check"><input type="checkbox" id="ev-mo" ${p.member_only ? 'checked' : ''}>只对 Club 会员开放</label>
+      <div class="hint">封面图在正式版里上传；演示版沿用类型默认封面。心灵齐旅在小程序里只收意向、不收款，价格填「起价」即可。</div>
+    </div>
+    <div class="acts" style="margin-top:18px"><button class="btn btn-ink" id="evSave">${id ? '保存修改' : '发布'}</button>
+      ${id ? `<button class="btn ${p.status === 'off' ? '' : 'btn-bad'}" id="evOff">${p.status === 'off' ? '重新上架' : '下架'}</button>` : ''}</div>`
+  $('#drawer').classList.add('open'); $('#close').onclick = closeSide
+  $('#evSave').onclick = () => {
+    const g = k => $('#ev-' + k).value.trim()
+    if (!g('title')) return toast('请填写活动标题')
+    if (!g('start_at')) return toast('请填写开始时间')
+    const v = { type: g('type'), title: g('title'), subtitle: g('subtitle'), start_at: g('start_at').replace('T', ' '), end_at: g('end_at').replace('T', ' '), city: g('city'), venue: g('venue'),
+      price_normal: Math.round(Number(g('pn')) * 100), price_member: Math.round(Number(g('pm')) * 100), quota: Math.max(1, Number(g('quota')) || 1),
+      deadline: g('deadline').replace('T', ' '), collab: g('collab') ? { name: g('collab') } : null, desc: g('desc'), member_only: $('#ev-mo').checked }
+    if (v.price_member > v.price_normal) return toast('会员价不能高于非会员价')
+    if (!id) DB.newEvents.push(Object.assign({ _id: 'new-' + Date.now(), signed_count: 0, status: 'open', isNew: true }, v))
+    else if (DB.newEvents.some(x => x._id === id)) Object.assign(DB.newEvents.find(x => x._id === id), v)
+    else DB.events[id] = Object.assign(DB.events[id] || {}, v)
+    save(); closeSide(); V.events(); toast(id ? '已保存修改' : '已发布，小程序活动页会出现这一场')
+  }
+  if (id) $('#evOff').onclick = () => {
+    const off = p.status !== 'off', tgt = DB.newEvents.find(x => x._id === id) || (DB.events[id] = DB.events[id] || {})
+    tgt.status = off ? 'off' : 'open'; save(); closeSide(); V.events(); toast(off ? '已下架，小程序里不再显示' : '已重新上架')
+  }
 }
 function roster (id) {
-  const p = MOCK.products.find(x => x._id === id), r = seeded([...id].reduce((a, c) => a + c.charCodeAt(0), 7))
-  const people = DB.members.slice().sort(() => r() - 0.5).slice(0, p.signed_count), ck = DB.checkins[id] = DB.checkins[id] || {}
+  const p = allEvents().find(x => x._id === id), r = seeded([...id].reduce((a, c) => a + c.charCodeAt(0), 7))
+  const people = DB.members.slice().sort(() => r() - 0.5).slice(0, p.signed_count || 0), ck = DB.checkins[id] = DB.checkins[id] || {}
   const n = people.filter(m => ck[m.id]).length
   $('#roster').innerHTML = `<div class="count" style="margin-bottom:6px">报名名单 · 已签到 ${n} / ${people.length}</div>
     <div style="overflow-x:auto"><table class="roster"><thead><tr><th>会员</th><th>身份</th><th>手机</th><th>到场</th></tr></thead><tbody>${people.map(m => `<tr>
@@ -889,6 +1023,147 @@ function roster (id) {
   $('#roster').querySelectorAll('[data-u]').forEach(cb => cb.onchange = () => { ck[cb.dataset.u] = cb.checked; save(); roster(id) })
 }
 
+let FO = { k: 'all', q: '' }
+V.orders = () => {
+  const q = FO.q.trim().toLowerCase()
+  const list = allOrders().filter(o => ({ all: true, club: o.t === 'club', event: !['club', 'goods'].includes(o.t), goods: o.t === 'goods', ship: o.t === 'goods' && o.ship && o.ship.status === 'pending' })[FO.k]
+    && (!q || (o.m.nickname + o.m.phone + o.title).toLowerCase().includes(q)))
+  const sum = list.reduce((a, o) => a + o.amount, 0)
+  const state = o => o.t === 'goods' ? `<span class="st ${o.ship.status === 'pending' ? 'w' : 'm'}">${SHIP_ST[o.ship.status]}</span>${o.ship.no ? `<small class="sub">${o.ship.carrier} ${o.ship.no}</small>` : ''}`
+    : o.t === 'club' ? '<span class="st m">已支付</span>' : `<span class="st ${o.attended ? 'm' : ''}">${o.attended ? '已到场' : '未到场'}</span>`
+  const act = o => o.t !== 'goods' ? '' : o.ship.status === 'pending' ? `<button class="btn btn-ink sm" data-ship="${o.oid}">发货</button>` : o.ship.status === 'shipped' ? `<button class="btn sm" data-sign="${o.oid}">标记签收</button>` : ''
+  $('#main').innerHTML = `
+    <div class="head"><div><div class="eyebrow">Orders</div><h1 class="h1">订单</h1></div><div class="lede">会员年费、活动报名和商品订单都在这里；商品订单在这里填快递单号发货，用户在小程序里就能查到物流</div></div>
+    <div class="tools">
+      <label class="search"><input id="oq" placeholder="搜用户、手机号或商品名" value="${esc(FO.q)}" aria-label="搜索订单"></label>
+      <div class="seg" id="oseg">${[['all', '全部'], ['club', '会员年费'], ['event', '活动'], ['goods', '商品'], ['ship', '待发货']].map(([k, t]) => `<button data-k="${k}" class="${FO.k === k ? 'on' : ''}">${t}</button>`).join('')}</div>
+      <span class="count">${list.length} 笔 · 合计 ¥${yuan(sum)}</span>
+    </div>
+    <div class="dir"><table><thead><tr><th>日期</th><th>用户</th><th>内容</th><th>类型</th><th class="r">金额</th><th>状态</th><th></th></tr></thead><tbody>
+    ${list.length ? list.slice(0, 300).map(o => `<tr><td>${o.at}</td><td><div class="who"><span class="av ${isMember(o.m) ? 'm' : ''}">${esc(o.m.nickname.slice(0, 1))}</span><div><b>${esc(o.m.nickname)}</b><span>${o.m.phone}</span></div></div></td>
+      <td>${esc(o.title)}${o.sku ? `<small class="sub">${esc(o.sku)} × ${o.qty}</small>` : ''}</td><td>${TYPE[o.t]}</td><td class="r"><span class="money">¥${yuan(o.amount)}</span></td><td>${state(o)}</td><td class="r">${act(o)}</td></tr>`).join('')
+      : '<tr><td colspan="7" class="none">没有符合条件的订单</td></tr>'}</tbody></table></div>`
+  $('#oq').oninput = e => { FO.q = e.target.value; const p = e.target.selectionStart; V.orders(); const el = $('#oq'); el.focus(); el.setSelectionRange(p, p) }
+  $('#oseg').onclick = e => { const k = e.target.dataset.k; if (k) { FO.k = k; V.orders() } }
+  const find = oid => DB.members.flatMap(m => m.orders).find(o => o.oid === oid)
+  document.querySelectorAll('[data-ship]').forEach(b => b.onclick = async () => {
+    const o = find(b.dataset.ship)
+    const v = await dialog({ title: '发货', text: `${o.title}（${o.sku} × ${o.qty}），寄往：${o.address}`, fields: [{ id: 'c', label: '快递公司', value: '顺丰速运' }, { id: 'n', label: '快递单号', ph: 'SF1234 5678 9012' }], ok: '确认发货' })
+    if (!v) return
+    if (!v.n) return toast('请填写快递单号')
+    o.ship = { status: 'shipped', carrier: v.c || '顺丰速运', no: v.n }; save(); V.orders(); toast('已发货，用户在小程序「我的订单」里能看到物流')
+  })
+  document.querySelectorAll('[data-sign]').forEach(b => b.onclick = () => { const o = find(b.dataset.sign); o.ship.status = 'delivered'; save(); V.orders(); toast('已标记签收') })
+}
+
+let FL = 'all'
+V.leads = () => {
+  const list = DB.leads.filter(l => FL === 'all' || l.kind === FL || l.status === FL).sort((a, b) => b.at.localeCompare(a.at))
+  $('#main').innerHTML = `
+    <div class="head"><div><div class="eyebrow">Leads</div><h1 class="h1">线索</h1></div><div class="lede">小程序里「心灵齐旅 · 提交意向」和「机构合作」提交的信息。心灵齐旅线下成交后，在这里补录金额，会计入这位用户的累计消费</div></div>
+    <div class="tools"><div class="seg" id="lseg">${[['all', '全部'], ['journey', '心灵齐旅'], ['org', '机构合作'], ['new', '未联系']].map(([k, t]) => `<button data-k="${k}" class="${FL === k ? 'on' : ''}">${t}</button>`).join('')}</div>
+      <span class="count">${list.length} 条</span></div>
+    <div class="leads">${list.map(l => `<article class="lead" data-id="${l.id}">
+      <div class="lead-h"><span class="lead-k">${l.kind === 'journey' ? '心灵齐旅意向' : '机构合作'}</span><span class="st ${l.status === 'new' ? 'w' : l.status === 'won' ? 'm' : ''}">${LEAD_ST[l.status]}</span></div>
+      <div class="lead-t">${esc(l.target)}</div>
+      <div class="lead-d">${esc(l.detail)}</div>
+      <div class="lead-p"><b>${esc(l.name)}</b> ${l.phone}<span class="sub">${l.at}</span></div>
+      ${l.status === 'won' && l.amount ? `<div class="lead-w">已成交 · ¥${yuan(l.amount)} 已补录到累计消费</div>` : ''}
+      <label class="field">跟进备注<input data-note value="${esc(l.note)}" placeholder="例如：已加微信，约了周二电话"></label>
+      <div class="acts">${Object.entries(LEAD_ST).filter(([k]) => k !== l.status).map(([k, t]) => `<button class="btn sm ${k === 'won' ? 'btn-ink' : ''}" data-st="${k}">标为${t}</button>`).join('')}</div>
+    </article>`).join('') || '<div class="none">没有线索</div>'}</div>`
+  $('#lseg').onclick = e => { const k = e.target.dataset.k; if (k) { FL = k; V.leads() } }
+  document.querySelectorAll('.lead').forEach(el => {
+    const l = DB.leads.find(x => x.id === el.dataset.id)
+    el.querySelector('[data-note]').onchange = e => { l.note = e.target.value; save(); toast('备注已保存') }
+    el.querySelectorAll('[data-st]').forEach(b => b.onclick = async () => {
+      const st = b.dataset.st
+      if (st === 'won' && l.kind === 'journey') {
+        const v = await dialog({ title: '标为已成交', text: '心灵齐旅在线下收款。填上实际成交金额，会补录进这位用户的累计消费和参与记录。', fields: [{ id: 'a', label: '成交金额（元）', value: '12500' }], ok: '确认成交' })
+        if (!v) return
+        l.amount = Math.round(Number(v.a) * 100) || 0
+        const m = DB.members.find(x => x.nickname === l.name)
+        if (m) { m.orders.push({ t: 'journey', title: l.target, amount: l.amount, at: d2s(TODAY), attended: null, oid: m.id + '-' + m.orders.length }); logIt(m, `心灵齐旅线下成交，补录 ¥${yuan(l.amount)}`) }
+        toast(m ? `已成交，¥${yuan(l.amount)} 已计入 ${m.nickname} 的累计消费` : '已成交（没有找到同名用户，金额只记在线索上）')
+      } else toast('已标为' + LEAD_ST[st])
+      l.status = st; save(); V.leads()
+    })
+  })
+}
+
+V.community = () => {
+  const fl = id => DB.postFlags[id] = DB.postFlags[id] || {}
+  const posts = MOCK.posts.map(x => Object.assign({}, x, { featured: fl(x._id).featured != null ? fl(x._id).featured : x.featured, pinned: !!fl(x._id).pinned, hidden: !!fl(x._id).hidden }))
+    .sort((a, b) => (b.pinned - a.pinned) || b.created_at.localeCompare(a.created_at))
+  const evTitle = id => (allEvents().find(e => e._id === id) || {}).title || ''
+  $('#main').innerHTML = `
+    <div class="head"><div><div class="eyebrow">Community</div><h1 class="h1">社群</h1></div><div class="lede">「精选」的动态非会员也能看到（最多前 3 条）；「置顶」排在最前；「隐藏」后所有人都看不到。正式上线前，还要接上微信的内容安全检测</div></div>
+    <div class="posts">${posts.map(x => `<article class="post ${x.hidden ? 'off' : ''}" data-id="${x._id}">
+      <div class="who"><span class="av m">${esc(x.author.slice(0, 1))}</span><div><b>${esc(x.author)}${x.pinned ? '<span class="pill">置顶</span>' : ''}${x.featured ? '<span class="pill">精选</span>' : ''}${x.hidden ? '<span class="pill">已隐藏</span>' : ''}</b><span>${x.created_at}${x.event_id ? ' · 来自「' + esc(evTitle(x.event_id)) + '」' : ''}</span></div></div>
+      <p class="post-t">${esc(x.text)}</p>
+      <div class="post-f"><span class="sub">${x.likes} 赞 · ${x.comments.length} 评论${x.images.length ? ' · ' + x.images.length + ' 张图' : ''}</span>
+        <div class="acts" style="margin:0"><button class="btn sm" data-f="featured">${x.featured ? '取消精选' : '设为精选'}</button><button class="btn sm" data-f="pinned">${x.pinned ? '取消置顶' : '置顶'}</button>
+        <button class="btn sm ${x.hidden ? '' : 'btn-bad'}" data-f="hidden">${x.hidden ? '恢复显示' : '隐藏'}</button><button class="btn sm" data-mute="${esc(x.author)}">禁言作者</button></div></div>
+    </article>`).join('')}</div>`
+  document.querySelectorAll('.post').forEach(el => {
+    const id = el.dataset.id, cur = posts.find(x => x._id === id)
+    el.querySelectorAll('[data-f]').forEach(b => b.onclick = () => { const k = b.dataset.f; fl(id)[k] = !cur[k]; save(); V.community(); toast({ featured: cur[k] ? '已取消精选' : '已设为精选', pinned: cur[k] ? '已取消置顶' : '已置顶', hidden: cur[k] ? '已恢复显示' : '已隐藏' }[k]) })
+    el.querySelector('[data-mute]').onclick = e => {
+      const m = DB.members.find(x => x.nickname === e.target.dataset.mute)
+      if (!m) return toast('演示数据里没有这位作者的会员档案')
+      m.muted = !m.muted; logIt(m, m.muted ? '在社群管理里被禁言' : '在社群管理里解除禁言'); save(); toast(m.muted ? `已禁言 ${m.nickname}` : `已解除 ${m.nickname} 的禁言`)
+    }
+  })
+}
+
+// 渠道码：每个渠道一个码，扫码进来的用户自动记上来源
+const CH_TYPES = [['podcast', 'Podcast'], ['account', '官方账号'], ['partner', '合作品牌'], ['offline', '线下物料'], ['friend', '朋友 / 社群'], ['other', '其他']]
+function channelList () {
+  const base = MOCK.channels.map(c => ({ id: c.channel_id, name: c.name, type: c.type, created: '2026-03-01' }))
+  return base.concat(DB.channels)
+}
+function qrSvg (text, size = 132) {
+  if (typeof qrcode !== 'function') return '<div class="qr-miss">二维码组件没加载出来（需要联网）</div>'
+  const q = qrcode(0, 'M'); q.addData(text); q.make()
+  const n = q.getModuleCount(), cell = size / (n + 4); let d = ''
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (q.isDark(r, c)) d += `M${((c + 2) * cell).toFixed(2)},${((r + 2) * cell).toFixed(2)}h${cell.toFixed(2)}v${cell.toFixed(2)}h-${cell.toFixed(2)}z`
+  return `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="渠道二维码"><rect width="${size}" height="${size}" fill="#FFFFFF"/><path d="${d}" fill="#22332C"/></svg>`
+}
+function qrPng (text, name) {
+  const q = qrcode(0, 'M'); q.addData(text); q.make()
+  const n = q.getModuleCount(), cell = 12, size = (n + 8) * cell, cv = document.createElement('canvas'); cv.width = size; cv.height = size + 60
+  const x = cv.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, cv.width, cv.height); x.fillStyle = '#22332C'
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (q.isDark(r, c)) x.fillRect((c + 4) * cell, (r + 4) * cell, cell, cell)
+  x.font = '600 26px sans-serif'; x.textAlign = 'center'; x.fillText(name, size / 2, size + 30)
+  const a = document.createElement('a'); a.href = cv.toDataURL('image/png'); a.download = `渠道码_${name}.png`; document.body.appendChild(a); a.click(); a.remove()
+}
+V.channels = () => {
+  const list = channelList().map(c => {
+    const us = DB.members.filter(m => m.source === c.name)
+    return Object.assign(c, { users: us.length, members: us.filter(isMember).length, revenue: us.reduce((a, m) => a + spent(m), 0), path: `pages/index/index?channel=${c.id}` })
+  }).sort((a, b) => b.users - a.users)
+  $('#main').innerHTML = `
+    <div class="head"><div><div class="eyebrow">Channels</div><h1 class="h1">渠道码</h1></div><button class="btn btn-ink" id="newCh">新建渠道码</button></div>
+    <div class="lede" style="margin:-12px 0 16px">给每个 Podcast、合作品牌、线下物料各发一个码。用户扫哪个码进来，就自动记上哪个来源，下面的人数和收入跟着统计。演示版生成的是普通二维码（内容为小程序页面路径）；正式版由后台生成微信小程序码，用微信一扫就进小程序</div>
+    <div class="chs">${list.map(c => `<article class="ch" data-id="${c.id}">
+      <div class="ch-qr">${qrSvg(c.path)}</div>
+      <div class="ch-b"><div class="ch-k">${(CH_TYPES.find(t => t[0] === c.type) || ['', '其他'])[1]}</div><div class="ch-t">${esc(c.name)}</div>
+        <div class="ch-n"><span><b class="tnum">${c.users}</b>位用户</span><span><b class="tnum">${c.members}</b>位入会</span><span><b class="tnum">¥${yuan(c.revenue)}</b>累计消费</span></div>
+        <code class="ch-p">${esc(c.path)}</code>
+        <div class="acts"><button class="btn sm" data-png>下载图片</button><button class="btn sm" data-copy>复制页面路径</button></div></div>
+    </article>`).join('')}</div>`
+  document.querySelectorAll('.ch').forEach(el => {
+    const c = list.find(x => x.id === el.dataset.id)
+    el.querySelector('[data-png]').onclick = () => { try { qrPng(c.path, c.name) } catch (e) { toast('下载没成功，可以直接截图这张码') } }
+    el.querySelector('[data-copy]').onclick = () => { try { navigator.clipboard.writeText(c.path).then(() => toast('已复制页面路径'), () => toast('没能复制，请手动选中')) } catch (e) { toast('没能复制，请手动选中') } }
+  })
+  $('#newCh').onclick = async () => {
+    const v = await dialog({ title: '新建渠道码', text: '起一个一看就知道是哪儿的名字，例如「Podcast 第 43 期」「前滩书店台卡」。', fields: [{ id: 'n', label: '渠道名称', ph: '例如：前滩书店台卡' }, { id: 't', label: '渠道类型', options: CH_TYPES, value: 'offline' }], ok: '生成' })
+    if (!v || !v.n) return
+    DB.channels.push({ id: 'ch_' + Date.now().toString(36), name: v.n, type: v.t, created: d2s(TODAY) }); save(); V.channels(); toast('已生成「' + v.n + '」的渠道码')
+  }
+}
+
 V.export = () => {
   const ms = DB.members, nOrders = ms.reduce((a, m) => a + m.orders.length, 0), nAtt = ms.reduce((a, m) => a + joins(m), 0)
   $('#main').innerHTML = `
@@ -896,6 +1171,7 @@ V.export = () => {
     <div class="exp">
       <div class="exp-row"><div class="exp-n tnum">${ms.length}</div><div style="flex:1"><b>会员表</b><span>身份、编号、到期日、来源、城市、累计消费、报名与到场次数、各项权限</span></div><div class="acts" style="margin:0"><button class="btn" data-c="members">复制表格</button><button class="btn btn-ink" data-x="members">下载 CSV</button></div></div>
       <div class="exp-row"><div class="exp-n tnum">${nOrders}</div><div style="flex:1"><b>订单表</b><span>每一笔会员年费、活动报名和商品购买，带金额和日期</span></div><div class="acts" style="margin:0"><button class="btn" data-c="orders">复制表格</button><button class="btn btn-ink" data-x="orders">下载 CSV</button></div></div>
+      <div class="exp-row"><div class="exp-n tnum">${DB.leads.length}</div><div style="flex:1"><b>线索表</b><span>心灵齐旅意向和机构合作咨询，带跟进状态、备注和成交金额</span></div><div class="acts" style="margin:0"><button class="btn" data-c="leads">复制表格</button><button class="btn btn-ink" data-x="leads">下载 CSV</button></div></div>
       <div class="exp-row"><div class="exp-n tnum">${nAtt}</div><div style="flex:1"><b>报名到场表</b><span>每位用户参加过的活动，以及是否实际到场</span></div><div class="acts" style="margin:0"><button class="btn" data-c="attend">复制表格</button><button class="btn btn-ink" data-x="attend">下载 CSV</button></div></div>
     </div>`
   document.querySelectorAll('[data-x]').forEach(b => b.onclick = () => exportCsv(b.dataset.x))
@@ -918,11 +1194,16 @@ function exportCsv (kind) {
   const out = tableRows(kind)
   const csv = '\ufeff' + out.map(r => r.map(v => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`).join(',')).join('\r\n')
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }))
-  a.download = `MindYoga_${{ members: '会员表', orders: '订单表', attend: '报名到场表' }[kind]}_${d2s(TODAY)}.csv`
+  a.download = `MindYoga_${{ members: '会员表', orders: '订单表', attend: '报名到场表', leads: '线索表' }[kind]}_${d2s(TODAY)}.csv`
   document.body.appendChild(a); a.click(); a.remove(); toast(`已下载 ${out.length - 1} 行`)
 }
 function tableRows (kind) {
   const ms = DB.members, out = []
+  if (kind === 'leads') {
+    out.push(['提交时间', '类型', '称呼', '手机', '对象', '说明', '状态', '备注', '成交金额（元）'])
+    DB.leads.forEach(l => out.push([l.at, l.kind === 'journey' ? '心灵齐旅意向' : '机构合作', l.name, l.phone, l.target, l.detail, LEAD_ST[l.status], l.note, l.amount / 100]))
+    return out
+  }
   if (kind === 'members') {
     out.push(['昵称', '手机', '身份', '会员编号', '入会日', '到期日', '来源', '城市', '首次进入', '累计消费（元）', '报名次数', '到场次数', '社群发言', 'Club 限定', '优先报名', '禁言', '备注'])
     ms.forEach(m => out.push([m.nickname, m.phone, isMember(m) ? '会员' : '非会员', m.member_no, m.member_since, isMember(m) ? m.member_expire_at : '', m.source, m.city, m.first_visit_at, spent(m) / 100, joins(m), shows(m),
