@@ -220,6 +220,14 @@ textarea:focus { border-color: var(--gold); }
 .exp-row span { display: block; font-size: 13px; color: var(--muted); }
 .exp-n { font-family: var(--serif); font-size: 32px; min-width: 70px; color: var(--gold); }
 
+/* ---------- 扫码签到 ---------- */
+.scan { display: flex; align-items: flex-end; gap: 14px; margin-bottom: 10px; }
+.scan .field input { width: 100%; border: 1px solid var(--hair); background: var(--raise); border-radius: 10px; padding: 9px 12px; font-size: 15px; letter-spacing: 2px; color: var(--ink); }
+.scan-msg { font-size: 13px; padding: 8px 12px; border-radius: 10px; margin-bottom: 10px; }
+.scan-msg.ok { background: var(--viz-fill); color: var(--ok); }
+.scan-msg.again { background: var(--gold-soft); color: var(--warn); }
+.scan-msg.bad { background: rgba(162,70,58,.1); color: var(--bad); }
+
 /* ---------- 待处理 ---------- */
 .todo { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
 .todo-i { display: flex; align-items: center; gap: 14px; text-align: left; border: 1px solid var(--hair); background: var(--panel); border-radius: 16px; padding: 14px 18px; color: var(--ink); }
@@ -960,7 +968,7 @@ V.events = () => {
     </article>` }
   $('#main').innerHTML = `
     <div class="head"><div><div class="eyebrow">Programmes</div><h1 class="h1">活动</h1></div><button class="btn btn-ink" id="newEv">发布活动</button></div>
-    <div class="lede" style="margin:-12px 0 8px">发布、编辑、下架活动；满员了可以加名额、改报名截止时间；活动当天在名单里勾选到场</div>
+    <div class="lede" style="margin:-12px 0 8px">发布、编辑、下架活动；满员了可以加名额、改报名截止时间；活动当天打开「名单 / 签到」，扫用户的入场码签到，也可以手动勾选</div>
     <div class="sec">即将开始 · ${up.length} 场</div><div class="evs">${up.map(card).join('')}</div>
     <div class="sec">已结束 · ${past.length} 场</div><div class="evs">${past.map(card).join('')}</div>`
   document.querySelectorAll('.ev').forEach(el => {
@@ -1015,13 +1023,31 @@ function roster (id) {
   const p = allEvents().find(x => x._id === id), r = seeded([...id].reduce((a, c) => a + c.charCodeAt(0), 7))
   const people = DB.members.slice().sort(() => r() - 0.5).slice(0, p.signed_count || 0), ck = DB.checkins[id] = DB.checkins[id] || {}
   const n = people.filter(m => ck[m.id]).length
-  $('#roster').innerHTML = `<div class="count" style="margin-bottom:6px">报名名单 · 已签到 ${n} / ${people.length}</div>
-    <div style="overflow-x:auto"><table class="roster"><thead><tr><th>会员</th><th>身份</th><th>手机</th><th>到场</th></tr></thead><tbody>${people.map(m => `<tr>
+  $('#roster').innerHTML = `
+    <div class="scan"><label class="field" style="flex:1">扫码签到：用扫码枪扫用户的入场码，或者输入码下面的 6 位数字后按回车
+      <input id="scanIn" placeholder="扫码或输入 6 位数字" autocomplete="off"></label><span class="count">已签到 ${n} / ${people.length}</span></div>
+    <div id="scanMsg" class="scan-msg" hidden></div>
+    <div style="overflow-x:auto"><table class="roster"><thead><tr><th>会员</th><th>身份</th><th>手机</th><th>入场码</th><th>到场</th></tr></thead><tbody>${people.map(m => `<tr>
     <td><div class="who"><span class="av ${isMember(m) ? 'm' : ''}">${esc(m.nickname.slice(0, 1))}</span><b>${esc(m.nickname)}</b></div></td>
     <td><span class="st ${isMember(m) ? 'm' : ''}">${isMember(m) ? '会员' : '非会员'}</span></td><td>${m.phone}</td>
+    <td><span class="no">${code6(id + m.id)}</span></td>
     <td><label class="check"><input type="checkbox" data-u="${m.id}" ${ck[m.id] ? 'checked' : ''}>已到场</label></td></tr>`).join('')}</tbody></table></div>`
   $('#roster').querySelectorAll('[data-u]').forEach(cb => cb.onchange = () => { ck[cb.dataset.u] = cb.checked; save(); roster(id) })
+  const inp = $('#scanIn'); inp.focus()
+  inp.onkeydown = e => {
+    if (e.key !== 'Enter') return
+    // 扫码枪扫出来的是「MYC:订单号:6 位数字」，手输的是 6 位数字，两种都认
+    const raw = inp.value.trim(), digits = (raw.match(/(\d{6})$/) || [])[1]
+    const m = people.find(x => code6(id + x.id) === digits)
+    const msg = $('#scanMsg'); msg.hidden = false
+    if (!m) { msg.className = 'scan-msg bad'; msg.textContent = `没找到「${raw}」，请核对 6 位数字`; inp.select(); return }
+    if (ck[m.id]) { msg.className = 'scan-msg again'; msg.textContent = `${m.nickname} 已经签到过了`; inp.select(); return }
+    ck[m.id] = true; save(); roster(id)
+    const m2 = $('#scanMsg'); m2.hidden = false; m2.className = 'scan-msg ok'; m2.textContent = `签到成功：${m.nickname}${isMember(m) ? '（会员 ' + m.member_no + '）' : ''}`
+  }
 }
+// 与小程序同一套算法：订单号 → 固定的 6 位数字
+function code6 (str) { let h = 2166136261; for (const c of String(str)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0 } return String(h % 1000000).padStart(6, '0') }
 
 let FO = { k: 'all', q: '' }
 V.orders = () => {
